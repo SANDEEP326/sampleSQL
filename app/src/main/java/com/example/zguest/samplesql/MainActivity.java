@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
-import android.support.v7.widget.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,7 +19,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends ActionBarActivity{
+public class MainActivity extends AppCompatActivity{
     public final static String EXTRA_MESSAGE = "MESSAGE";
     private ListView obj;
     DBHelper mydb;
