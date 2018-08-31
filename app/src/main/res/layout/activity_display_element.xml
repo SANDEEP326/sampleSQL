@@ -23,6 +23,7 @@
             android:layout_marginLeft="82dp"
             android:ems="10"
             android:inputType="text" >
+            <requestFocus />
         </EditText>
 
         <EditText
@@ -109,9 +110,9 @@
             android:layout_alignLeft="@+id/editTextName"
             android:layout_below="@+id/editTextPhone"
             android:ems="10"
-            android:inputType="text" >
+            android:inputType="text">
 
-            <requestFocus />
+
         </EditText>
 
         <EditText

@@ -20,7 +20,6 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String COLUMN_STREET = "street";
     public static final String COLUMN_CITY = "place";
     public static final String COLUMN_PHONE = "phone";
-    //private HashMap hp;
 
     public DBHelper(Context context) {
         super(context, DATABASE_NAME , null, 1);
@@ -28,7 +27,6 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        // TODO Auto-generated method stub
         db.execSQL(
                 "create table contacts " +
                         "(id integer primary key, name text,phone text,email text, street text,place text)"
@@ -37,7 +35,6 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        // TODO Auto-generated method stub
         db.execSQL("DROP TABLE IF EXISTS contacts");
         onCreate(db);
     }
@@ -88,7 +85,6 @@ public class DBHelper extends SQLiteOpenHelper {
     public ArrayList<String> getAllElements() {
         ArrayList<String> array_list = new ArrayList<String>();
 
-        //hp = new HashMap();
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor res =  db.rawQuery( "select * from contacts", null );
         res.moveToFirst();

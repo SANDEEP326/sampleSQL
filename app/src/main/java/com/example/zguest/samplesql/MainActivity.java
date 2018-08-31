@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity{
         obj.setOnItemClickListener(new OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,long arg3) {
-                // TODO Auto-generated method stub
+                Log.e("arg2",""+arg2);
                 int id_To_Search = arg2 + 1;
 
                 Bundle dataBundle = new Bundle();

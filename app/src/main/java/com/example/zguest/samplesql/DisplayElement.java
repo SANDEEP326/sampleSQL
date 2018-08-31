@@ -19,7 +19,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class DisplayElement extends AppCompatActivity {
-    int from_Where_I_Am_Coming = 0;
     private DBHelper mydb ;
 
     EditText name ;
