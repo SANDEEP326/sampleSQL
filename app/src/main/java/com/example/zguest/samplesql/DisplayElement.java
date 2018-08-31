@@ -8,34 +8,36 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class DisplayElement extends Activity {
+public class DisplayElement extends AppCompatActivity {
     int from_Where_I_Am_Coming = 0;
     private DBHelper mydb ;
 
-    TextView name ;
-    TextView phone;
-    TextView email;
-    TextView street;
-    TextView place;
+    EditText name ;
+    EditText phone;
+    EditText email;
+    EditText street;
+    EditText place;
     int id_To_Update = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_element);
-        name = (TextView) findViewById(R.id.editTextName);
-        phone = (TextView) findViewById(R.id.editTextPhone);
-        email = (TextView) findViewById(R.id.editTextStreet);
-        street = (TextView) findViewById(R.id.editTextEmail);
-        place = (TextView) findViewById(R.id.editTextCity);
+        name = (EditText) findViewById(R.id.editTextName);
+        phone = (EditText) findViewById(R.id.editTextPhone);
+        email = (EditText) findViewById(R.id.editTextStreet);
+        street = (EditText) findViewById(R.id.editTextEmail);
+        place = (EditText) findViewById(R.id.editTextCity);
 
         mydb = new DBHelper(this);
 
